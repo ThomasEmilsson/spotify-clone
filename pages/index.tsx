@@ -25,7 +25,7 @@ const Home = ({ artists }) => {
 
         <Flex>
           {artists.map((artist) => (
-            <Box paddingX="15px" width="12%">
+            <Box paddingX="15px" width="12%" key={artist.id}>
               <Box bg="gray.900" width="100%" borderRadius="4px" padding="15px">
                 <Image src="https://placedog.net/300/300" borderRadius="100%" />
                 <Box marginTop="15px">
