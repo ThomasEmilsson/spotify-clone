@@ -21,7 +21,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         time: Date.now(),
       },
       "secret-key",
-      { expiresIn: "8h" }
+      {
+        expiresIn: "8h",
+      }
     );
 
     res.setHeader(
@@ -38,6 +40,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     res.json(user);
   } else {
     res.status(401);
-    res.json({ error: "Email or Password Incorrect" });
+    res.json({ error: "Email or Password is wrong" });
   }
 };
